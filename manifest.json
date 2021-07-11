@@ -1,0 +1,21 @@
+{
+    "name": "职教云小帮手",
+    "description": "删除多余功能只保留搜题功能",
+    "version": "4.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        "js/*",
+        "data/data.json"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "*://zjy2.icve.com.cn/*"
+        ],
+        "js": [
+            "JCfun.js"
+        ]
+    }]
+}
